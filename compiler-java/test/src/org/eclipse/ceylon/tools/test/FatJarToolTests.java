@@ -34,10 +34,12 @@ import java.util.zip.ZipFile;
 import org.eclipse.ceylon.common.Versions;
 import org.eclipse.ceylon.common.tool.OptionArgumentException;
 import org.eclipse.ceylon.common.tool.ToolModel;
+import org.eclipse.ceylon.compiler.java.test.RunSingleThreaded;
 import org.eclipse.ceylon.tools.fatjar.CeylonFatJarTool;
 import org.junit.Assert;
 import org.junit.Test;
 
+@RunSingleThreaded
 public class FatJarToolTests extends AbstractToolTests {
 
     @Test
