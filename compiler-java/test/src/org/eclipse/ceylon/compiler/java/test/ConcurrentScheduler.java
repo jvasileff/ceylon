@@ -30,7 +30,10 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 import org.junit.runners.model.RunnerScheduler;
 
 public class ConcurrentScheduler implements RunnerScheduler {
-    private final ThreadPoolExecutor tpool = (ThreadPoolExecutor)Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(),
+    private final ThreadPoolExecutor tpool = (ThreadPoolExecutor)Executors.newFixedThreadPool(
+            // limit to max 4 threads to reduce frequency of race condition test failures :/
+            // including the "testJar" test
+            Math.min(4, Runtime.getRuntime().availableProcessors()),
             new ThreadFactory() {
                 int ii = 0;
                 @Override
