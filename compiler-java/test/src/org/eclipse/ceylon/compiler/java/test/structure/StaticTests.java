@@ -73,9 +73,7 @@ public class StaticTests extends CompilerTests {
 
     @Test
     public void testStaticMembers() {
-        if (!System.getProperty("java.version").contains("1.7")) {
-            compareWithJavaSource(Arrays.asList("-target", "8", "-source", "8"), "attribute/StaticMembers.src", "attribute/StaticMembers.ceylon");
-        }
+        compareWithJavaSource(Arrays.asList("-target", "8", "-source", "8"), "attribute/StaticMembers.src", "attribute/StaticMembers.ceylon");
     }
 
     @Test
@@ -88,8 +86,6 @@ public class StaticTests extends CompilerTests {
                     new CompilerError(29, "declaration of static interface member is not allowed unless you set the -target flag to 8: --javac=-target=8"),
                     new CompilerError(31, "declaration of static interface member is not allowed unless you set the -target flag to 8: --javac=-target=8"),
                     new CompilerError(34, "declaration of static interface member is not allowed unless you set the -target flag to 8: --javac=-target=8"));
-        if (!System.getProperty("java.version").contains("1.7")) {
-            compile(Arrays.asList("-target", "8", "-source", "8"), "klass/StaticInterfaceMethods.ceylon");
-        }
+        compile(Arrays.asList("-target", "8", "-source", "8"), "klass/StaticInterfaceMethods.ceylon");
     }
 }

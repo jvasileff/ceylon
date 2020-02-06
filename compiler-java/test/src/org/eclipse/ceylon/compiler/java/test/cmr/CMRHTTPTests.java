@@ -22,7 +22,6 @@ package org.eclipse.ceylon.compiler.java.test.cmr;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import org.junit.Ignore;
 
 import java.io.File;
 import java.io.IOException;
@@ -308,7 +307,6 @@ public class CMRHTTPTests extends CompilerTests {
 
 
     @Test
-    @Ignore("Temporarily disabling for work on 1.3.4")
     public void testMdlHTTPMixedCompilation() throws IOException{
         testMdlHTTPMixedCompilation(false, 133);
         testMdlHTTPMixedCompilation(true, 20);

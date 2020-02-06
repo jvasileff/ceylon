@@ -46,7 +46,6 @@ import org.eclipse.ceylon.tools.importjar.ImportJarException;
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Test;
-import org.junit.Ignore;
 
 public class ImportJarToolTests extends AbstractToolTests {
 
@@ -445,7 +444,6 @@ public class ImportJarToolTests extends AbstractToolTests {
     }
     
     @Test
-    @Ignore("Temporarily disabling for work on 1.3.4")
     public void testWithPropertiesDescriptorCwd() throws Exception {
         File destDir = destFile("importtest");
         FileUtil.delete(destDir);

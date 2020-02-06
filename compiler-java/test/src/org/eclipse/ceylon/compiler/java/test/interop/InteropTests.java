@@ -349,7 +349,6 @@ public class InteropTests extends CompilerTests {
     }
     
     @Test
-    @Ignore("Temporarily disabling for work on 1.3.4")
     public void testIopCallsDefaultAccessMethod(){
         compile("access/JavaAccessModifiers.java");
         compareWithJavaSource("access/CallsDefaultAccessMethod");
